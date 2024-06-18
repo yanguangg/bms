@@ -1,0 +1,18 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<!--<mapper namespace="com.example.BMS.mapper.RuleMapper">-->
+
+<!--    <select id="getRules" resultType="com.example.BMS.entity.Rule">-->
+<!--        select * from rules-->
+<!--        <where>-->
+<!--            <if test="warnId != 0">-->
+<!--                and warn_id = #{warnId}-->
+<!--            </if>-->
+<!--            <if test="batteryType != null">-->
+<!--                and battery_type = #{batteryType}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--        order by warning_rule desc-->
+<!--    </select>-->
+<!--</mapper>-->

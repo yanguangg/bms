@@ -1,0 +1,171 @@
+spring:
+  application:
+    name: BMS
+  data:
+    redis:
+      host: localhost
+      password: 123456
+      database: 8
+      port: 6379
+
+server:
+  port: 8080
+
+# swagger
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: default
+      paths-to-match: /**
+      packages-to-scan: com.xiaominfo.knife4j.demo.web
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+# database (commented out)
+# spring:
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/bms
+#     username: root
+#     password: 83721
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+
+# log
+logging:
+  level:
+    org.springframework.jdbc: DEBUG
+    com.example.BookDemo: DEBUG
+    org.springframework.jdbc.core: DEBUG
+    org.mybatis: DEBUG
+
+# MyBatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.BMS.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+bms-vehicles:
+  vehicles:
+    - id: 1
+      vid: A1B2C3D4E5F6G7H8
+      batteryType: 三元电池
+      totalMileage: 100
+      batteryHealth: 100
+    - id: 2
+      vid: I9J0K1L2M3N4O5P6
+      batteryType: 铁锂电池
+      totalMileage: 600
+      batteryHealth: 95
+    - id: 3
+      vid: Q7R8S9T0U1V2W3X4
+      batteryType: 三元电池
+      totalMileage: 300
+      batteryHealth: 98
+
+bms-rules:
+  rules:
+    - id: 1
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 三元电池
+      warning_rule: 5
+      warning_level: 0
+    - id: 2
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 三元电池
+      warning_rule: 3
+      warning_level: 1
+    - id: 3
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 三元电池
+      warning_rule: 1
+      warning_level: 2
+    - id: 4
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 三元电池
+      warning_rule: 0.6
+      warning_level: 3
+    - id: 5
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 三元电池
+      warning_rule: 0.2
+      warning_level: 4
+    - id: 7
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 铁锂电池
+      warning_rule: 2
+      warning_level: 0
+    - id: 8
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 铁锂电池
+      warning_rule: 1
+      warning_level: 1
+    - id: 9
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 铁锂电池
+      warning_rule: 0.7
+      warning_level: 2
+    - id: 10
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 铁锂电池
+      warning_rule: 0.4
+      warning_level: 3
+    - id: 11
+      warn_id: 1
+      name: 电压差报警
+      battery_type: 铁锂电池
+      warning_rule: 0.2
+      warning_level: 4
+    - id: 13
+      warn_id: 2
+      name: 电流差报警
+      battery_type: 三元电池
+      warning_rule: 3
+      warning_level: 0
+    - id: 14
+      warn_id: 2
+      name: 电流差报警
+      battery_type: 三元电池
+      warning_rule: 1
+      warning_level: 1
+    - id: 15
+      warn_id: 2
+      name: 电流差报警
+      battery_type: 三元电池
+      warning_rule: 0.2
+      warning_level: 2
+    - id: 17
+      warn_id: 2
+      name: 电流差报警
+      battery_type: 铁锂电池
+      warning_rule: 1
+      warning_level: 0
+    - id: 18
+      warn_id: 2
+      name: 电流差报警
+      battery_type: 铁锂电池
+      warning_rule: 0.5
+      warning_level: 1
+    - id: 19
+      warn_id: 2
+      name: 电流差报警
+      battery_type: 铁锂电池
+      warning_rule: 0.2
+      warning_level: 2
+
